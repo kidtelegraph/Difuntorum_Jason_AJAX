@@ -110,6 +110,7 @@
     fetch("https://swiftpixel.com/earbud/api/materials")
     .then(response => response.json())
     .then(material => {
+      materialHere.innerHTML = "";
       console.log(material);
 
       let ul = document.createElement("ul")
