@@ -103,7 +103,41 @@
   loadInfoBoxes();
 
 
+  function loadMaterialInfo(){
+    materialHere.innerHTML = spinner;
+    function getDesc() {
+    fetch("https://swiftpixel.com/earbud/api/materials")
+    .then(respone => respone.json())
+    .then(material => {
+      console.log(material);
 
+      let ul = document.createElement("ul")
+
+      material.forEach((materialInfo)=> {
+        const li = document.createElement("li");
+
+        const h3 = document.createElement("h3");
+        h3.textContent = materialInfo.heading;
+        
+        const p = document.createElement("p");
+        p.textContent = materialInfo.description;
+
+        li.appendChild(h3);
+        li.appendChild(p);
+        ul.appendChild(li);
+        materialHere.appendChild(ul);
+      });
+    })
+
+    // .catch(error => console.error(error));
+    .catch(error => {
+      console.error("Failed to load material info", error);
+      alert("Loading Error. Try again in a few minutes.")
+    })
+    }
+    getDesc();
+  }
+  loadMaterialInfo();
 
 
   function showInfo() {
