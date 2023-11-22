@@ -4,9 +4,7 @@ MMED - 3039 (Earbuds - InfoBoxes - Materials - AJAX Application)
 # Homework Requirements
 The Fetch API is used to make AJAX requests in modern browsers and is implemented widely. It returns a Promise that resolves to a Response object
 
-Need to use fetch API in sourcing the information to the webpage
-
-for InfoBoxes and Materials
+Need to use fetch API in sourcing the information to the webpage for infoboxes and materials.
 
 # How to use
 This website showcases the use of AJAX Fetch API
